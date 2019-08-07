@@ -1,0 +1,55 @@
+img {
+  max-width: 100%; }
+
+.han-position-top {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: url(../images/bg_top.png) repeat-x;
+  height: 75px;
+  padding: 0 20px 0 70px;
+  color: #fff; }
+  .han-position-top .t-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    position: absolute;
+    left: 10px;
+    top: 12px; }
+  .han-position-top .t-title {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 8px 0 0; }
+  .han-position-top .t-list li {
+    line-height: 1.5;
+    list-style: none;
+    font-size: 12px; }
+    .han-position-top .t-list li label {
+      display: inline-block;
+      margin-right: 10px; }
+    .han-position-top .t-list li .star {
+      display: inline-block;
+      height: 15px;
+      background: url(../images/star.png) repeat-x;
+      background-size: auto 15px;
+      vertical-align: middle; }
+      .han-position-top .t-list li .star.s1 {
+        width: 15px; }
+      .han-position-top .t-list li .star.s2 {
+        width: 30px; }
+      .han-position-top .t-list li .star.s3 {
+        width: 45px; }
+      .han-position-top .t-list li .star.s4 {
+        width: 60px; }
+      .han-position-top .t-list li .star.s5 {
+        width: 75px; }
+  .han-position-top .t-btn {
+    display: block;
+    width: 100px;
+    height: 30px;
+    background: url(../images/btn_down.png) no-repeat;
+    background-size: auto 100%; }
+
+/*# sourceMappingURL=style.css.map */
