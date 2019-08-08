@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="src/assets/styles/uikit.min.css">
@@ -29,7 +28,7 @@
     <!--顶部固定-->
     <div class="han-position-top">
         <div class="t-bg"></div>
-        <img src="http://imga3.5054399.com/upload_pic/2016/10/27/4399_15454748568.jpg" alt="" class="t-img"  data-uk-offcanvas="{target:'#my-offcanvas-modal'}">
+        <img src="http://imga3.5054399.com/upload_pic/2016/10/27/4399_15454748568.jpg" alt="" class="t-img" uk-toggle="target: #my-offcanvas-modal">
         <div class="t-title">生死狙击</div>
         <ul class="t-list">
             <li><label>游戏类型：SLG</label> 5.5MB</li>
@@ -69,9 +68,15 @@
                 <div class="han-third-login">
                     <h3 class="third-title">第三方登录</h3>
                     <ul class="third-list">
-                        <li><a href="" class="icon qq"></a></li>
-                        <li><a href="" class="icon wechat"></a></li>
-                        <li><a href="" class="icon weibo"></a></li>
+                        <li>
+                            <a href="" class="icon qq"></a>
+                        </li>
+                        <li>
+                            <a href="" class="icon wechat"></a>
+                        </li>
+                        <li>
+                            <a href="" class="icon weibo"></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -90,8 +95,7 @@
                 </ul>
                 <button class="uk-button uk-button-primary  uk-width-1-1">注 册</button>
                 <div class="f-agreement">
-                    <label><input class="uk-checkbox" type="checkbox" checked> 同意</label><span class="blue"
-                        uk-toggle="target: #my-agreement">《用户服务协议》</span>
+                    <label><input class="uk-checkbox" type="checkbox" checked> 同意</label><span class="blue" uk-toggle="target: #my-agreement">《用户服务协议》</span>
                 </div>
             </div>
         </div>
@@ -103,19 +107,16 @@
             <h4 class="big-title">游客登录成功</h4>
             <ul class="h-form-normal">
                 <li>
-                    <label>账号：</label>
-                    jhjh514545
+                    <label>账号：</label> jhjh514545
                 </li>
                 <li>
-                    <label>密码：</label>
-                    123456
+                    <label>密码：</label> 123456
                 </li>
             </ul>
             <div class="uk-alert-warning" uk-alert>
                 <p><span uk-icon="warning"></span> 为了防止您下次登录的时候忘记账号密码，请绑定您的手机号，以便于找回密码！</p>
             </div>
-            <button class="uk-button uk-button-primary  uk-width-1-1"
-                uk-toggle="target: #bind-mobile-modal">立即绑定手机</button>
+            <button class="uk-button uk-button-primary  uk-width-1-1" uk-toggle="target: #bind-mobile-modal">立即绑定手机</button>
             <div class="f-foot uk-clearfix">
                 <a href="" class="uk-align-right gray">下次绑定</a>
             </div>
@@ -173,9 +174,81 @@
         </div>
     </div>
     <!-- 这是抽屉式边栏 -->
-    <div id="my-offcanvas-modal" class="uk-offcanvas">
-        <div class="uk-offcanvas-bar">
-            <div class="uk-panel">...</div>
+    <div id="my-offcanvas-modal" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar han-side-bar-wrap">
+            <div class="side-header">
+                <img src="src/assets/images/avatar.jpg" alt="" class="avatar">
+                <p class="name">隔壁的老王</p>
+                <p class="desc">ID：157517</p>
+                <span class="mobile active"></span>
+            </div>
+            <div class="side-history-game">
+                <h3 class="history-title">
+                    最近在玩
+                </h3>
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true">
+
+                    <ul class="uk-slider-items uk-child-width-1-4 uk-grid">
+                        <li>
+                            <div class="uk-panel">
+                                <img src="http://imga5.5054399.com/upload_pic/2019/5/16/4399_11121690097.jpg" alt="">
+                                <p class="name">弹弹堂</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-panel">
+                                <img src="http://imga2.5054399.com/upload_pic/7272/5/49581.jpg" alt="">
+                                <p class="name">保卫怪物岛</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-panel">
+                                <img src="http://imga2.5054399.com/upload_pic/2018/3/16/4399_16571144155.jpg" alt="">
+                                <p class="name">世界射箭锦标赛</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-panel">
+                                <img src="http://imga1.5054399.com/upload_pic/2016/2/25/4399_09283901137.jpg" alt="">
+                                <p class="name">炫酷旋转忍者</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-panel">
+                                <img src="http://imga4.5054399.com/upload_pic/2019/7/30/4399_11335142051.jpg" alt="">
+                                <p class="name">美味的坚果2</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-panel">
+                                <img src="http://imga3.5054399.com/upload_pic/2019/5/30/4399_15524930438.jpg" alt="">
+                                <p class="name">地铁大跑酷</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="side-hot-game">
+                <h3 class="hot-tilte">热门游戏</h3>
+                <ul class="hot-list">
+                    <li>
+                        <img src="http://imga3.5054399.com/upload_pic/2016/2/25/4399_09351176342.jpg" class="img" alt="">
+                        <p class="name">保卫萝卜挑战版2</p>
+                        <p class="desc">高清电脑版再次火热来袭</p>
+                        <a href="" class="open">打开</a>
+                    </li>
+                    <li>
+                        <img src="http://imga2.5054399.com/upload_pic/2019/3/26/4399_16554656111.jpg" class="img" alt="">
+                        <p class="name">勇者之路</p>
+                        <p class="desc">一个被历史誉为冒险王的世界最强者</p>
+                        <a href="" class="open">打开</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="side-footer">
+                <button class="uk-button uk-button-primary uk-width-1-1">退出</button>
+            </div>
         </div>
     </div>
 
@@ -185,18 +258,15 @@
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div>
                 <p style="text-align:start">用户服务协议</p>
-                <p style="text-align:start">第一条&nbsp;&nbsp; &nbsp;定义及解释<br>
-                    除本协议另有规定外，下列用语或术语应当具有以下定义:<br>
-                    1.1京东：北京长天资产管理有限公司，注册地址为北京市海淀区阜成路73号18层1815号，为京东东家的管理者及运营者。<br>
-                    1.2京东东家（下称“东家”）：指由京东运营并管理的，域名为http//dj.jd.com的网络金融信息服务平台，东家为其实名注册用户提供网络化公司股权投融资服务。<br>
-                    1.3用户：指通过东家实名认证审查，参与私募股权投融资活动的个人或单位，包括融资人和投资人。<br>
-                    1.4融资人：指通过东家实名认证的个人或单位。融资人应履行东家《融资人规则》中的相关义务。融资人在融资项目通过东家初步审核后应与京东签署《私募股权融资信息服务协议》。<br>
-                    1.5 融资项目：由融资人发起并通过东家展示的待投项目。<br>
-                    1.6投资人：指经东家实名认证并满足东家《投资人规则》中合格投资人资格的个人和单位。<br>
-                    1.7 东家规则：指在东家上发布的任何规范性文件，包括但不限于本协议、《互联网私募股权融资信息服务协议》、《融资人规则》、《投资人规则》、《信息披露规则》等任何经东家公示及生效的规则。</p>
-                <p style="text-align:start">第二条&nbsp;&nbsp; &nbsp;东家服务宗旨及签约主体<br>
-                    2.1东家是一个致力于帮助中小企业和创业者实现梦想的专业化投融资平台。融资人可以在东家上发起创新项目的融资需求，投资人以现金认购项目公司股权。东家鼓励融资人与投资人共担风险，共享收益。<br>
-                    2.2为保护参与各方的合法权益，规范融资人及投资人的交易行为，维护东家秩序，京东与用户特依据《中华人民共和国合同法》、《中华人民共和国公司法》、及其他相关法律、法规的规定，本着平等、自愿、等价有偿的原则达成如下用户服务协议（下称“本协议”），以资共同遵守。
+                <p style="text-align:start">第一条&nbsp;&nbsp; &nbsp;定义及解释<br> 除本协议另有规定外，下列用语或术语应当具有以下定义:
+                    <br> 1.1京东：北京长天资产管理有限公司，注册地址为北京市海淀区阜成路73号18层1815号，为京东东家的管理者及运营者。
+                    <br> 1.2京东东家（下称“东家”）：指由京东运营并管理的，域名为http//dj.jd.com的网络金融信息服务平台，东家为其实名注册用户提供网络化公司股权投融资服务。
+                    <br> 1.3用户：指通过东家实名认证审查，参与私募股权投融资活动的个人或单位，包括融资人和投资人。
+                    <br> 1.4融资人：指通过东家实名认证的个人或单位。融资人应履行东家《融资人规则》中的相关义务。融资人在融资项目通过东家初步审核后应与京东签署《私募股权融资信息服务协议》。
+                    <br> 1.5 融资项目：由融资人发起并通过东家展示的待投项目。<br> 1.6投资人：指经东家实名认证并满足东家《投资人规则》中合格投资人资格的个人和单位。
+                    <br> 1.7 东家规则：指在东家上发布的任何规范性文件，包括但不限于本协议、《互联网私募股权融资信息服务协议》、《融资人规则》、《投资人规则》、《信息披露规则》等任何经东家公示及生效的规则。</p>
+                <p style="text-align:start">第二条&nbsp;&nbsp; &nbsp;东家服务宗旨及签约主体<br> 2.1东家是一个致力于帮助中小企业和创业者实现梦想的专业化投融资平台。融资人可以在东家上发起创新项目的融资需求，投资人以现金认购项目公司股权。东家鼓励融资人与投资人共担风险，共享收益。
+                    <br> 2.2为保护参与各方的合法权益，规范融资人及投资人的交易行为，维护东家秩序，京东与用户特依据《中华人民共和国合同法》、《中华人民共和国公司法》、及其他相关法律、法规的规定，本着平等、自愿、等价有偿的原则达成如下用户服务协议（下称“本协议”），以资共同遵守。
                 </p>
             </div>
         </div>
@@ -219,7 +289,7 @@
             }
         }
         //发送验证码
-        $(".getSecond").click(function () {
+        $(".getSecond").click(function() {
             sendyzm($(".getSecond"));
         });
         //用ajax提交到后台的发送短信接口
@@ -229,12 +299,14 @@
             if (result) {
                 $.ajax({
                     url: "http://localhost:8085",
-                    data: { phone: phone },
+                    data: {
+                        phone: phone
+                    },
                     dataType: "json",
                     type: "post",
                     async: false,
                     cache: false,
-                    success: function (res) {
+                    success: function(res) {
                         debugger;
                         if (res) {
                             alert("验证码发送成功");
@@ -242,28 +314,31 @@
 
                         }
                     },
-                    error: function () {
+                    error: function() {
                         alert("验证码发送失败");
                     }
                 })
-                setTime(obj);//开始倒计时
+                setTime(obj); //开始倒计时
             }
         }
 
         //60s倒计时实现逻辑
         var countdown = 60;
+
         function setTime(obj) {
             if (countdown == 0) {
                 obj.prop('disabled', false);
                 obj.text("点击获取验证码");
-                countdown = 60;//60秒过后button上的文字初始化,计时器初始化;
+                countdown = 60; //60秒过后button上的文字初始化,计时器初始化;
                 return;
             } else {
                 obj.prop('disabled', true);
                 obj.text("(" + countdown + "s)后重新发送");
                 countdown--;
             }
-            setTimeout(function () { setTime(obj) }, 1000) //每1000毫秒执行一次
+            setTimeout(function() {
+                    setTime(obj)
+                }, 1000) //每1000毫秒执行一次
         }
 
 
@@ -284,7 +359,6 @@
             $(".j-forget-getmobile").hide();
             $(".j-forget-setpsw").show();
         }
-
     </script>
 </body>
 

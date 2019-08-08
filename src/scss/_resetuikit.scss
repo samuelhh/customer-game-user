@@ -1,36 +1,61 @@
 @import "_variables";
-
-.uk-tab > * {
-  flex: 1;
+.uk-tab>* {
+    flex: 1;
 }
 
-.uk-tab > * > a {
-  font-size: 1rem;
+.uk-tab>*>a {
+    font-size: 1rem;
 }
 
 .uk-modal-body {
-  padding: 20px 30px;
+    padding: 20px 30px;
 }
 
 .uk-modal-dialog {
-  border-radius: $border-radius;
+    border-radius: $border-radius;
 }
 
 .uk-button {
-  border-radius: $border-radius - 2;
+    border-radius: $border-radius - 2;
 }
 
-.uk-tab > .uk-active > a {
-  border-bottom: 2px solid $theme-color;
+.uk-tab>.uk-active>a {
+    border-bottom: 2px solid $theme-color;
 }
+
 .uk-checkbox:checked,
 .uk-checkbox:indeterminate,
 .uk-radio:checked {
-  border-radius: 2px;
+    border-radius: 2px;
 }
+
 .uk-alert {
-  font-size: 12px;
-  .links{
-    color: $theme-color;
-  }
+    font-size: 12px;
+    .links {
+        color: $theme-color;
+    }
+}
+
+.uk-offcanvas-bar {
+    background: #fff;
+    color: #333;
+    width: 300px;
+    padding: 0;
+    .uk-close,
+    h3 {
+        color: #333;
+    }
+    .uk-button-primary {
+        background-color: $theme-color;
+        color: #fff;
+        border: 1px solid transparent;
+    }
+}
+
+.uk-grid {
+    margin-left: 0;
+}
+
+.uk-grid>* {
+    padding-left: 10px;
 }

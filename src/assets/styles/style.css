@@ -45,6 +45,32 @@ h1, h2, h3, h4, h5, h6 {
   color: #1e87f0;
 }
 
+.uk-offcanvas-bar {
+  background: #fff;
+  color: #333;
+  width: 300px;
+  padding: 0;
+}
+
+.uk-offcanvas-bar .uk-close,
+.uk-offcanvas-bar h3 {
+  color: #333;
+}
+
+.uk-offcanvas-bar .uk-button-primary {
+  background-color: #1e87f0;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.uk-grid {
+  margin-left: 0;
+}
+
+.uk-grid > * {
+  padding-left: 10px;
+}
+
 .han-position-top {
   z-index: 99;
   position: fixed;
@@ -260,6 +286,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-size: 14px;
   color: #666;
+  margin-bottom: 15px;
 }
 
 .han-third-login .third-list {
@@ -294,4 +321,161 @@ h1, h2, h3, h4, h5, h6 {
 .han-third-login .third-list li .icon.weibo {
   background: #e6162d url(../images/login/weibo.png) no-repeat center;
   background-size: 50%;
+}
+
+.han-side-bar-wrap .side-header {
+  position: relative;
+  background: #f5f7f9;
+  padding: 35px 0 0 90px;
+  min-height: 70px;
+}
+
+.han-side-bar-wrap .side-header .avatar {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.han-side-bar-wrap .side-header .name {
+  margin: 0;
+  font-size: 16px;
+}
+
+.han-side-bar-wrap .side-header .desc {
+  margin: 0;
+  font-size: 12px;
+}
+
+.han-side-bar-wrap .side-header .mobile {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  display: block;
+  width: 35px;
+  height: 35px;
+  background: url(../images/mobile_normal.png) no-repeat;
+  background-size: auto 100%;
+}
+
+.han-side-bar-wrap .side-header .mobile.active {
+  background: url(../images/mobile_bind.png) no-repeat;
+  background-size: auto 100%;
+}
+
+.han-side-bar-wrap .side-footer {
+  padding: 0 20% 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.han-side-bar-wrap .side-hot-game .hot-tilte {
+  font-size: 16px;
+  font-weight: bold;
+  text-indent: 10px;
+  line-height: 25px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.han-side-bar-wrap .side-hot-game .hot-tilte::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 100%;
+  background: #1e87f0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.han-side-bar-wrap .side-hot-game .hot-list {
+  margin: 0;
+  padding: 0;
+}
+
+.han-side-bar-wrap .side-hot-game .hot-list li {
+  list-style: none;
+  position: relative;
+  padding: 5px 80px 0 70px;
+  border-bottom: 1px solid #ededed;
+  min-height: 55px;
+  margin-bottom: 10px;
+}
+
+.han-side-bar-wrap .side-hot-game .hot-list li .img {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.han-side-bar-wrap .side-hot-game .hot-list li .name {
+  margin: 0;
+  font-size: 14px;
+  height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.han-side-bar-wrap .side-hot-game .hot-list li .desc {
+  margin: 0;
+  font-size: 12px;
+  color: #999;
+  height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.han-side-bar-wrap .side-hot-game .hot-list li .open {
+  border: 1px solid #1e87f0;
+  line-height: 20px;
+  border-radius: 20px;
+  width: 60px;
+  display: inline-block;
+  text-align: center;
+  color: #1e87f0;
+  font-size: 12px;
+  position: absolute;
+  right: 10px;
+  top: 20%;
+}
+
+.han-side-bar-wrap .side-history-game .history-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-indent: 10px;
+  line-height: 25px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.han-side-bar-wrap .side-history-game .history-title::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 100%;
+  background: #1e87f0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.han-side-bar-wrap .side-history-game .name {
+  text-align: center;
+  margin: 0;
+  color: #333;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
