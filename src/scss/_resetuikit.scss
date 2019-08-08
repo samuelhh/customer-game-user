@@ -1,0 +1,36 @@
+@import "_variables";
+
+.uk-tab > * {
+  flex: 1;
+}
+
+.uk-tab > * > a {
+  font-size: 1rem;
+}
+
+.uk-modal-body {
+  padding: 20px 30px;
+}
+
+.uk-modal-dialog {
+  border-radius: $border-radius;
+}
+
+.uk-button {
+  border-radius: $border-radius - 2;
+}
+
+.uk-tab > .uk-active > a {
+  border-bottom: 2px solid $theme-color;
+}
+.uk-checkbox:checked,
+.uk-checkbox:indeterminate,
+.uk-radio:checked {
+  border-radius: 2px;
+}
+.uk-alert {
+  font-size: 12px;
+  .links{
+    color: $theme-color;
+  }
+}
