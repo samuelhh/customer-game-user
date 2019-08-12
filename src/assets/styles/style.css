@@ -601,3 +601,51 @@ h1, h2, h3, h4, h5, h6 {
   background: url(../images/side/back.png) no-repeat;
   background-size: 100%;
 }
+
+.han-weixin-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1010;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: rgba(0, 0, 0, 0.85);
+  opacity: 1;
+  transition: opacity .15s linear;
+}
+
+.han-weixin-modal.open {
+  display: block;
+}
+
+.han-weixin-modal .weixin-body {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.han-weixin-modal .weixin-body .ercode {
+  background: #fff;
+  width: 180px;
+  height: 180px;
+  padding: 10px;
+}
+
+.han-weixin-modal .weixin-body .close {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: -50px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(../images/icon_close_white.png) no-repeat center;
+  background-size: 60%;
+}
