@@ -591,6 +591,12 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
 }
 
+.han-side-bar-wrap .new-side-right .icon.switch {
+  background: #08b8c3 url(../images/side/switch.png) no-repeat center;
+  background-size: 65%;
+  border-radius: 50%;
+}
+
 .han-side-bar-wrap .new-side-right .icon.back {
   background: url(../images/side/back.png) no-repeat;
   background-size: 100%;

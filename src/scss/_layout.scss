@@ -430,7 +430,7 @@
       width: 35px;
       height: 35px;
 
-      @each $name, $color in (hider, #ff454a), (quit, #f86740), (refresh, #23d159), (service, #4184ef) {
+      @each $name, $color in (hider, #ff454a), (quit, #f86740), (refresh, #23d159), (service, #4184ef), (switch, #08b8c3) {
         &.#{$name} {
           background: #{$color} url(../images/side/#{$name}.png) no-repeat center;
           background-size: 65%;
