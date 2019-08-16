@@ -69,6 +69,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .uk-grid > * {
   padding-left: 10px;
+  text-align: center;
+}
+
+.uk-grid > * a {
+  text-decoration: none;
 }
 
 .uk-position-small {
@@ -327,6 +332,37 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 50%;
 }
 
+.han-side-bar-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 990;
+  width: 100vw;
+  touch-action: none;
+}
+
+.han-side-bar-wrap.hidden {
+  left: -50000px;
+}
+
+.han-side-bar-wrap.hidden .new-side-right {
+  left: -50000px;
+}
+
+.han-side-bar-wrap .side-bar-inner {
+  box-sizing: border-box;
+  background: #fff;
+  padding: 0 80px 0 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
 .han-side-bar-wrap .uk-alert {
   margin-top: 0;
   margin-bottom: 0;
@@ -530,12 +566,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .han-side-bar-wrap .side-history-game .scroll-inner {
-  padding: 0 35px 0 30px;
-  position: relative;
+  width: 105%;
 }
 
 .han-side-bar-wrap .new-side-right {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   bottom: 0;
@@ -559,6 +594,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
   width: 80px;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .han-side-bar-wrap .new-side-right .icon {
@@ -614,7 +650,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-overflow-scrolling: touch;
   background: rgba(0, 0, 0, 0.85);
   opacity: 1;
-  transition: opacity .15s linear;
+  transition: opacity 0.15s linear;
 }
 
 .han-weixin-modal.open {
