@@ -363,6 +363,15 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-overflow-scrolling: touch;
 }
 
+.han-side-bar-wrap .js-fixed-top.fixed {
+  background: #fff;
+  z-index: 2;
+  position: fixed;
+  right: 80px;
+  left: 0;
+  top: 0;
+}
+
 .han-side-bar-wrap .uk-alert {
   margin-top: 0;
   margin-bottom: 0;
@@ -444,7 +453,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 80%;
 }
 
-.han-side-bar-wrap .side-hot-game .hot-tilte {
+.han-side-bar-wrap .side-hot-tilte {
   font-size: 16px;
   font-weight: bold;
   text-indent: 10px;
@@ -453,7 +462,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-.han-side-bar-wrap .side-hot-game .hot-tilte::before {
+.han-side-bar-wrap .side-hot-tilte::before {
   content: "";
   display: block;
   width: 2px;
@@ -519,26 +528,6 @@ h1, h2, h3, h4, h5, h6 {
   top: 20%;
 }
 
-.han-side-bar-wrap .side-history-game .history-title {
-  font-size: 16px;
-  font-weight: bold;
-  text-indent: 10px;
-  line-height: 25px;
-  margin: 10px 0;
-  position: relative;
-}
-
-.han-side-bar-wrap .side-history-game .history-title::before {
-  content: "";
-  display: block;
-  width: 2px;
-  height: 100%;
-  background: #1e87f0;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
 .han-side-bar-wrap .side-history-game .name {
   text-align: center;
   margin: 0;
@@ -570,6 +559,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .han-side-bar-wrap .new-side-right {
+  z-index: 5;
   position: fixed;
   right: 0;
   top: 0;
