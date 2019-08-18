@@ -416,15 +416,26 @@
             </div>
         </div>
     </div>
-
+    <!-- 右下角弹窗 -->
+    <div class="common-right-fixed">
+        <a href="">
+            <img src="/src/assets/images/bottom_state_day.png" class="img">
+        </a>
+        <a href="javascript:;" class="close j-right-close"></a>
+    </div>
     <script>
+        //打开关闭最近玩
         $(".common-index-modal .c-btn").click(function() {
-            var box = $(".j-index-menu");
-            if (box.hasClass("hidden")) {
-                box.removeClass("hidden");
-            } else {
-                box.addClass("hidden");
-            }
+                var box = $(".j-index-menu");
+                if (box.hasClass("hidden")) {
+                    box.removeClass("hidden");
+                } else {
+                    box.addClass("hidden");
+                }
+            })
+            //关闭右下角弹窗
+        $(".j-right-close").click(function() {
+            $(".common-right-fixed").fadeOut(100)
         })
     </script>
 </body>
