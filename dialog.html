@@ -29,7 +29,7 @@
     <div class="han-position-top">
         <div class="t-bg"></div>
         <img src="http://imga3.5054399.com/upload_pic/2016/10/27/4399_15454748568.jpg" class="t-img" onclick="openSidebar()">
-        <div class="t-title">生死狙击</div>
+        <div class="t-title"><a href="/index.html">生死狙击</a> </div>
         <ul class="t-list">
             <li><label>游戏类型：SLG</label> 5.5MB</li>
             <li><label>热度：<i class="star s3"></i></label> 8.5分</li>
@@ -491,12 +491,13 @@
 
         //打开侧边栏
         function openSidebar() {
-            console.log("asd")
+            // console.log("asd");
             $(".han-side-bar-wrap").removeClass("hidden")
         }
         //关闭侧边栏
         function handleCloseSidebar() {
-            $(".han-side-bar-wrap").addClass("hidden")
+            $(".han-side-bar-wrap").addClass("hidden");
+            $('.js-fixed-top').removeClass("fixed");
         }
         //抽屉左侧滚动固定
         $(".side-bar-inner").scroll(
