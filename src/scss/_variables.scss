@@ -3,12 +3,12 @@ $theme-color: #1e87f0; //主色调
 $theme-link-color:#f60;
 $border-radius: 6px; //圆角幅度
 $side-right-width:80px; //抽屉右侧宽度
-$top-nav-bgcolor:#33cccc; //顶部导航背景
+$top-nav-bgcolor:$theme-color; //顶部导航背景#33cccc
 $top-nav-icon-width:45px;
 $top-nav-height:55px; //顶部导航高度
 $top-nav-left-width:60px; //顶部导航左侧宽度
 $top-nav-right-width:110px; //顶部导航右侧宽度
-$index-tabs-bgcolor:#1abc9c; //首页选项卡背景
+$index-tabs-bgcolor:$theme-color; //首页选项卡背景
 $foot-bar-height:45px; //底部导航高度
 $game-nav-height:96px; //游戏页面导航高度
 $game-side-width:70px; //游戏分类左侧宽度

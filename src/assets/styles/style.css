@@ -32,8 +32,8 @@ html {
 }
 
 .common-open, .common-game-list li .open, .han-page-index-wrap .index-banner-box .banner-foot .open, .han-page-index-wrap .index-scroll-new .open, .han-page-game-wrap .game-category-box .game-cate-inner .common-game-list li.special .foot .down {
-  border: 1px solid #33cccc;
-  color: #33cccc;
+  border: 1px solid #1e87f0;
+  color: #1e87f0;
   line-height: 24px;
   padding: 0 12px;
   border-radius: 30px;
@@ -45,7 +45,7 @@ html {
   display: flex;
   margin: 0 10px;
   border-radius: 6px;
-  border: 1px solid #1abc9c;
+  border: 1px solid #0e6ecd;
   background: #fff;
 }
 
@@ -58,12 +58,12 @@ html {
   display: block;
   line-height: 30px;
   text-align: center;
-  color: #1abc9c;
+  color: #0e6ecd;
   text-decoration: none;
 }
 
 .common-tabs li a.active {
-  background: #1abc9c;
+  background: #0e6ecd;
   color: #fff;
 }
 
@@ -77,7 +77,7 @@ html {
 
 .common-line-tabs {
   display: flex;
-  background: #33cccc;
+  background: #1e87f0;
 }
 
 .common-line-tabs li {
@@ -96,14 +96,14 @@ html {
 }
 
 .common-line-tabs li a.active {
-  border-bottom: 3px solid #1abc9c;
+  border-bottom: 3px solid #0e6ecd;
 }
 
 .common-top-nav {
   position: relative;
   padding: 0 45px;
   height: 55px;
-  background: #33cccc;
+  background: #1e87f0;
 }
 
 .common-top-nav .nav-left {
@@ -258,7 +258,7 @@ html {
 
 .common-game-list li .open.cover {
   color: #fff;
-  background: #33cccc;
+  background: #1e87f0;
 }
 
 .common-game-list li:last-child {
@@ -269,10 +269,9 @@ html {
   z-index: 99;
   position: fixed;
   left: 0;
-  top: 20%;
-  width: 170px;
-  height: 340px;
-  overflow: hidden;
+  top: 40%;
+  width: 40px;
+  height: 60px;
 }
 
 .common-index-modal .j-index-menu {
@@ -285,24 +284,24 @@ html {
 }
 
 .common-index-modal .c-btn {
-  background: #1abc9c;
-  width: 80px;
-  height: 80px;
+  background: #f60;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   position: absolute;
   z-index: 5;
-  right: 120px;
-  top: 125px;
+  right: 2px;
+  top: 1px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
 .common-index-modal .c-btn .t {
   position: absolute;
-  right: 15px;
-  top: 22px;
+  right: 10px;
+  top: 15px;
   color: #fff;
   line-height: 1.2;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .common-index-modal .circle-out {
@@ -312,6 +311,7 @@ html {
   border-radius: 50%;
   position: absolute;
   left: -170px;
+  top: -135px;
   opacity: 0.65;
 }
 
@@ -334,27 +334,27 @@ html {
 
 .common-index-modal .inner-box .link.a1 {
   left: 10px;
-  top: 20px;
+  top: -110px;
 }
 
 .common-index-modal .inner-box .link.a2 {
   left: 75px;
-  top: 60px;
+  top: -75px;
 }
 
 .common-index-modal .inner-box .link.a3 {
   left: 105px;
-  top: 130px;
+  top: 0;
 }
 
 .common-index-modal .inner-box .link.a4 {
   left: 75px;
-  bottom: 60px;
+  bottom: -80px;
 }
 
 .common-index-modal .inner-box .link.a5 {
   left: 10px;
-  bottom: 20px;
+  bottom: -135px;
 }
 
 .common-index-modal .inner-box .pic {
@@ -383,7 +383,7 @@ html {
 }
 
 .common-right-fixed .img {
-  width: 120px;
+  width: 100px;
 }
 
 .common-right-fixed .close {
@@ -1097,7 +1097,7 @@ html {
 .han-page-index-wrap .index-top-nav {
   line-height: 55px;
   height: 55px;
-  background: #33cccc;
+  background: #1e87f0;
   padding: 0 110px 0 60px;
   z-index: 5;
   position: fixed;
@@ -1186,11 +1186,11 @@ html {
   border-radius: 6px;
   min-height: 100px;
   margin: 10px;
-  padding-bottom: 1px;
+  padding: 10px;
 }
 
 .han-page-index-wrap .index-banner-box .uk-margin {
-  margin: 10px 0;
+  margin: 0;
 }
 
 .han-page-index-wrap .index-banner-box * + .uk-margin {
@@ -1203,8 +1203,8 @@ html {
 }
 
 .han-page-index-wrap .index-banner-box .banner-foot {
-  height: 60px;
-  padding: 0 80px 0 70px;
+  height: 50px;
+  padding: 0 80px 0 60px;
   position: relative;
   color: #333;
 }
@@ -1213,20 +1213,22 @@ html {
   width: 50px;
   height: 50px;
   position: absolute;
-  left: 10px;
+  left: 0;
   top: 0;
 }
 
 .han-page-index-wrap .index-banner-box .banner-foot .name {
-  font-size: 16px;
+  font-size: 14px;
+  padding-top: 5px;
 }
 
 .han-page-index-wrap .index-banner-box .banner-foot .desc {
-  font-size: 14px;
+  font-size: 12px;
   height: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #999;
 }
 
 .han-page-index-wrap .index-banner-box .banner-foot .open {
@@ -1245,7 +1247,7 @@ html {
   display: inline-block;
   width: 30vw;
   height: 1px;
-  background: #33cccc;
+  background: #1e87f0;
   position: absolute;
   left: 50%;
   top: 15px;
@@ -1287,10 +1289,25 @@ html {
 }
 
 .han-page-index-wrap .index-scroll-new .slide-item .uk-panel {
+  position: relative;
+  padding: 10px 0 18px;
+}
+
+.han-page-index-wrap .index-scroll-new .slide-item .uk-panel img {
+  border-radius: 8px;
+}
+
+.han-page-index-wrap .index-scroll-new .slide-item .uk-panel::before {
+  content: "";
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  padding: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 120px;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 20px;
 }
 
 .han-page-index-wrap .index-scroll-new .name {
@@ -1423,7 +1440,7 @@ html {
 }
 
 .han-page-game-wrap .game-side-bar .side-list li a.active {
-  color: #33cccc;
+  color: #1e87f0;
 }
 
 .han-page-game-wrap .game-category-box {
@@ -1478,7 +1495,7 @@ html {
   right: 10px;
   top: 5px;
   color: #fff;
-  background: #33cccc;
+  background: #1e87f0;
   line-height: 24px;
 }
 
