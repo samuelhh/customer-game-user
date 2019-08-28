@@ -1,7 +1,5 @@
 $bg-color:#f2f2f2;
 $theme-color: #1e87f0; //主色调
-$theme-link-color:#f60; //按钮文字颜色
-$theme-border-color:#f4f4f4; //按钮边框
 $border-radius: 6px; //圆角幅度
 $side-right-width:80px; //抽屉右侧宽度
 $top-nav-bgcolor:#33cccc; //顶部导航背景#33cccc
@@ -13,6 +11,13 @@ $index-tabs-bgcolor:#1abc9c; //首页选项卡背景
 $foot-bar-height:45px; //底部导航高度
 $game-nav-height:96px; //游戏页面导航高度
 $game-side-width:70px; //游戏分类左侧宽度
-//
+
+/*
+*2019-08-28 新增颜色
+*
+*/
+
+$theme-link-color:#f60; //按钮文字颜色
+$theme-border-color:#f4f4f4; //按钮边框
 $game-name-color:#282828; //游戏名称
 $game-desc-color:#797979; //游戏描述
