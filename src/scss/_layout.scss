@@ -716,15 +716,16 @@
     .index-scroll-new {
         overflow: hidden;
         .new-inner {
-            width: 108%;
+            width: 118%;
         }
         .slide-item {
-            padding: 0 5px;
+            padding: 0 3px;
             .uk-panel {
                 position: relative;
                 padding: 10px 0 18px;
                 img {
                     border-radius: 8px;
+                    width: 70%;
                 }
                 &::before {
                     content: "";
@@ -732,7 +733,7 @@
                     border-radius: 10px;
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
                     width: 100%;
-                    height: 120px;
+                    height: 100px;
                     z-index: -1;
                     position: absolute;
                     left: 0;

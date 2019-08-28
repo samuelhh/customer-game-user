@@ -33,12 +33,12 @@ html {
 
 //extend
 .common-open {
-    border: 1px solid $top-nav-bgcolor;
-    color: $top-nav-bgcolor;
+    border: 1px solid $theme-border-color;
+    color: $theme-link-color;
     line-height: 24px;
     padding: 0 12px;
     border-radius: 30px;
-    font-size: 14px;
+    font-size: 12px;
     text-decoration: none;
 }
 
@@ -47,7 +47,7 @@ html {
     display: flex;
     margin: 0 10px;
     border-radius: $border-radius;
-    border: 1px solid darken($color: $index-tabs-bgcolor, $amount: 10%);
+    border: 1px solid $index-tabs-bgcolor;
     background: #fff;
     li {
         flex: 1;
@@ -56,10 +56,10 @@ html {
             display: block;
             line-height: 30px;
             text-align: center;
-            color: darken($color: $index-tabs-bgcolor, $amount: 10%);
+            color: $index-tabs-bgcolor;
             text-decoration: none;
             &.active {
-                background: darken($color: $index-tabs-bgcolor, $amount: 10%);
+                background: $index-tabs-bgcolor;
                 color: #fff;
             }
         }
