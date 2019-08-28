@@ -633,7 +633,7 @@
         border-radius: $border-radius;
         min-height: 100px;
         margin: 10px;
-        padding: 10px;
+        padding: 10px 10px 0;
         .uk-margin {
             margin: 0;
         }
@@ -674,6 +674,13 @@
                 top: 20%;
                 @extend .common-open;
             }
+        }
+        .uk-slider-nav {
+            z-index: 3;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
         }
     }
     //首页公共title
@@ -722,7 +729,7 @@
             padding: 0 5px;
             .uk-panel {
                 position: relative;
-                padding: 10px 0 18px;
+                padding: 0 0 10px;
                 img {
                     border-radius: 8px;
                     width: 60px;
@@ -733,7 +740,7 @@
                     border-radius: 10px;
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
                     width: 100%;
-                    height: 105px;
+                    height: 90px;
                     z-index: -1;
                     position: absolute;
                     left: 0;

@@ -75,3 +75,7 @@
         height: 6px;
     }
 }
+
+.uk-dotnav>.uk-active>* {
+    background: $theme-link-color;
+}
