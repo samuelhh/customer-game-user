@@ -34,7 +34,7 @@ html {
 .common-open, .common-game-list li .open, .han-page-index-wrap .index-banner-box .banner-foot .open, .han-page-index-wrap .index-scroll-new .open, .han-page-game-wrap .game-category-box .game-cate-inner .common-game-list li.special .foot .down {
   border: 1px solid #f4f4f4;
   color: #f60;
-  line-height: 24px;
+  line-height: 22px;
   padding: 0 12px;
   border-radius: 30px;
   font-size: 12px;
@@ -209,9 +209,9 @@ html {
 .common-game-list li {
   list-style: none;
   position: relative;
-  padding: 5px 80px 0 80px;
+  padding: 5px 80px 0 70px;
   border-bottom: 1px solid #ededed;
-  height: 65px;
+  height: 55px;
   margin-bottom: 10px;
 }
 
@@ -219,8 +219,8 @@ html {
   position: absolute;
   left: 10px;
   top: 0;
-  width: 60px;
-  height: 60px;
+  width: 52px;
+  height: 52px;
 }
 
 .common-game-list li .name {
@@ -230,6 +230,7 @@ html {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #282828;
 }
 
 .common-game-list li .name .hot {
@@ -243,7 +244,7 @@ html {
 .common-game-list li .desc {
   margin: 0;
   font-size: 12px;
-  color: #999;
+  color: #797979;
   height: 16px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -358,8 +359,8 @@ html {
 }
 
 .common-index-modal .inner-box .pic {
-  width: 48px;
-  height: 48px;
+  width: 45px;
+  height: 45px;
   border-radius: 10px;
 }
 
@@ -469,6 +470,15 @@ html {
 
 .uk-position-small {
   margin: 5px;
+}
+
+.uk-dotnav > * {
+  padding-left: 5px;
+}
+
+.uk-dotnav > * > * {
+  width: 6px;
+  height: 6px;
 }
 
 /*
@@ -1198,20 +1208,20 @@ html {
 }
 
 .han-page-index-wrap .index-banner-box .banner-img {
-  border-radius: 6px;
+  border-radius: 15px;
   margin-bottom: 10px;
 }
 
 .han-page-index-wrap .index-banner-box .banner-foot {
   height: 50px;
-  padding: 0 80px 0 60px;
+  padding: 0 80px 0 50px;
   position: relative;
   color: #333;
 }
 
 .han-page-index-wrap .index-banner-box .banner-foot .avatar {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   left: 0;
   top: 0;
@@ -1219,7 +1229,7 @@ html {
 
 .han-page-index-wrap .index-banner-box .banner-foot .name {
   font-size: 14px;
-  padding-top: 5px;
+  color: #282828;
 }
 
 .han-page-index-wrap .index-banner-box .banner-foot .desc {
@@ -1228,19 +1238,19 @@ html {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #999;
+  color: #797979;
 }
 
 .han-page-index-wrap .index-banner-box .banner-foot .open {
   position: absolute;
-  right: 10px;
+  right: 0;
   top: 20%;
 }
 
 .han-page-index-wrap .index-title {
   position: relative;
-  height: 35px;
-  margin: 10px 0;
+  height: 20px;
+  margin: 5px 0 15px;
 }
 
 .han-page-index-wrap .index-title .i-line {
@@ -1281,11 +1291,11 @@ html {
 }
 
 .han-page-index-wrap .index-scroll-new .new-inner {
-  width: 118%;
+  width: 110%;
 }
 
 .han-page-index-wrap .index-scroll-new .slide-item {
-  padding: 0 3px;
+  padding: 0 5px;
 }
 
 .han-page-index-wrap .index-scroll-new .slide-item .uk-panel {
@@ -1295,7 +1305,7 @@ html {
 
 .han-page-index-wrap .index-scroll-new .slide-item .uk-panel img {
   border-radius: 8px;
-  width: 70%;
+  width: 60px;
 }
 
 .han-page-index-wrap .index-scroll-new .slide-item .uk-panel::before {
@@ -1304,7 +1314,7 @@ html {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   width: 100%;
-  height: 100px;
+  height: 105px;
   z-index: -1;
   position: absolute;
   left: 0;
@@ -1314,13 +1324,17 @@ html {
 .han-page-index-wrap .index-scroll-new .name {
   text-align: center;
   margin: 0;
-  color: #333;
+  color: #797979;
   font-size: 12px;
   height: 20px;
   line-height: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.han-page-index-wrap .index-scroll-new .open {
+  display: inline-block;
 }
 
 .han-page-index-wrap .index-scroll-hot {
@@ -1346,10 +1360,19 @@ html {
   border-radius: 6px;
 }
 
+.han-page-index-wrap .index-scroll-hot .uk-grid > * {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.han-page-index-wrap .index-scroll-hot .uk-grid > * .uk-panel img {
+  width: 85%;
+}
+
 .han-page-index-wrap .index-scroll-hot .name {
   text-align: center;
   margin: 0;
-  color: #333;
+  color: #797979;
   font-size: 12px;
   height: 20px;
   line-height: 20px;

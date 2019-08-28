@@ -641,24 +641,24 @@
             margin-top: 0!important;
         }
         .banner-img {
-            border-radius: $border-radius;
+            border-radius: $border-radius + 9;
             margin-bottom: 10px;
         }
         .banner-foot {
             height: 50px;
-            padding: 0 80px 0 60px;
+            padding: 0 80px 0 50px;
             position: relative;
             color: #333;
             .avatar {
-                width: 50px;
-                height: 50px;
+                width: 40px;
+                height: 40px;
                 position: absolute;
                 left: 0;
                 top: 0;
             }
             .name {
                 font-size: 14px;
-                padding-top: 5px;
+                color: $game-name-color;
             }
             .desc {
                 font-size: 12px;
@@ -666,11 +666,11 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                color: #999;
+                color: $game-desc-color;
             }
             .open {
                 position: absolute;
-                right: 10px;
+                right: 0;
                 top: 20%;
                 @extend .common-open;
             }
@@ -679,8 +679,8 @@
     //首页公共title
     .index-title {
         position: relative;
-        height: 35px;
-        margin: 10px 0;
+        height: 20px;
+        margin: 5px 0 15px;
         .i-line {
             display: inline-block;
             width: 30vw;
@@ -716,16 +716,16 @@
     .index-scroll-new {
         overflow: hidden;
         .new-inner {
-            width: 118%;
+            width: 110%;
         }
         .slide-item {
-            padding: 0 3px;
+            padding: 0 5px;
             .uk-panel {
                 position: relative;
                 padding: 10px 0 18px;
                 img {
                     border-radius: 8px;
-                    width: 70%;
+                    width: 60px;
                 }
                 &::before {
                     content: "";
@@ -733,7 +733,7 @@
                     border-radius: 10px;
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
                     width: 100%;
-                    height: 100px;
+                    height: 105px;
                     z-index: -1;
                     position: absolute;
                     left: 0;
@@ -744,7 +744,7 @@
         .name {
             text-align: center;
             margin: 0;
-            color: #333;
+            color: $game-desc-color;
             font-size: 12px;
             height: 20px;
             line-height: 20px;
@@ -753,6 +753,7 @@
             white-space: nowrap;
         }
         .open {
+            display: inline-block;
             @extend .common-open;
         }
     }
@@ -774,10 +775,19 @@
                 }
             }
         }
+        .uk-grid>* {
+            padding-left: 5px;
+            padding-right: 5px;
+            .uk-panel {
+                img {
+                    width: 85%;
+                }
+            }
+        }
         .name {
             text-align: center;
             margin: 0;
-            color: #333;
+            color: $game-desc-color;
             font-size: 12px;
             height: 20px;
             line-height: 20px;
