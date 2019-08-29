@@ -40,6 +40,12 @@ html {
     border-radius: 30px;
     font-size: 12px;
     text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    &:active {
+        background: $theme-link-color;
+        border-color: $theme-link-color;
+        color: #fff;
+    }
 }
 
 //common-tabs

@@ -36,13 +36,20 @@ html {
 }
 
 .common-open, .common-game-list li .open, .han-page-index-wrap .index-banner-box .banner-foot .open, .han-page-index-wrap .index-scroll-new .open, .han-page-game-wrap .game-category-box .game-cate-inner .common-game-list li.special .foot .down {
-  border: 1px solid #f4f4f4;
+  border: 1px solid #ddd;
   color: #f60;
   line-height: 22px;
   padding: 0 12px;
   border-radius: 30px;
   font-size: 12px;
   text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+
+.common-open:active, .common-game-list li .open:active, .han-page-index-wrap .index-banner-box .banner-foot .open:active, .han-page-index-wrap .index-scroll-new .open:active, .han-page-game-wrap .game-category-box .game-cate-inner .common-game-list li.special .foot .down:active {
+  background: #f60;
+  border-color: #f60;
+  color: #fff;
 }
 
 .common-tabs {
@@ -1335,6 +1342,8 @@ html {
 .han-page-index-wrap .index-scroll-new .slide-item .uk-panel img {
   border-radius: 8px;
   width: 60px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.35);
+  margin-bottom: 3px;
 }
 
 .han-page-index-wrap .index-scroll-new .slide-item .uk-panel::before {
@@ -1343,7 +1352,7 @@ html {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   width: 100%;
-  height: 90px;
+  height: 93px;
   z-index: -1;
   position: absolute;
   left: 0;
