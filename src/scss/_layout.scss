@@ -826,6 +826,7 @@
         left: 0;
         right: 0;
         top: 0;
+        overflow: hidden;
     }
     &.has-topbar {
         padding-top: $game-nav-height;
@@ -969,6 +970,323 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
+                }
+            }
+        }
+    }
+    //iframe
+    .game-iframe-wrap {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: $top-nav-height;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+/*
+------------------------
+我的
+------------------------
+*/
+
+.han-page-user-wrap {
+    &.has-step {
+        padding-top: $game-nav-height;
+    }
+    //top-bar
+    .user-top-fixed {
+        height: $top-nav-height;
+        z-index: 3;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        &.step {
+            height: $game-nav-height;
+        }
+        .step-wrap {
+            background: #fff;
+            height: 38px;
+            line-height: 38px;
+            font-size: 14px;
+            li {
+                width: 50%;
+                float: left;
+                text-align: center;
+                &.active {
+                    color: $theme-color;
+                }
+                &:first-child {
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        right: -19px;
+                        top: 0;
+                        content: "";
+                        display: block;
+                        width: 38px;
+                        height: 38px;
+                        background: url(../images/user/arr_right2.png) no-repeat center;
+                        background-size: auto 150%;
+                        opacity: 0.3;
+                    }
+                }
+            }
+        }
+    }
+    //head
+    .user-head {
+        background: $top-nav-bgcolor;
+        min-height: 70px;
+        padding: 10px 0 0 100px;
+        position: relative;
+        .avatar {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+        }
+        .info {
+            color: #fff;
+            .name {
+                font-size: 18px;
+                font-weight: bold;
+                height: 22px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-bottom: 5px;
+            }
+            .desc {
+                font-size: 14px;
+            }
+        }
+    }
+    //title
+    .user-title {
+        position: relative;
+        height: 20px;
+        margin: 5px 0 15px;
+        .i-line {
+            display: inline-block;
+            width: 30vw;
+            height: 1px;
+            background: $top-nav-bgcolor;
+            position: absolute;
+            left: 50%;
+            top: 15px;
+            transform: translate(-50%, 0)
+        }
+        .i-text {
+            background: $bg-color;
+            padding: 0 10px;
+            z-index: 2;
+            position: absolute;
+            left: 50%;
+            top: 3px;
+            transform: translate(-50%, 0);
+            font-size: 16px;
+        }
+    }
+    //游戏列表
+    .user-game-list {
+        padding: 10px 0;
+        li {
+            &.game-item {
+                float: left;
+                width: 50vw;
+                margin-bottom: 10px;
+                .game-inner {
+                    width: 92%;
+                    margin: 0 auto;
+                    background: #fff;
+                    min-height: 140px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+                    border-radius: 6px;
+                    text-align: center;
+                    .img-cover {
+                        height: 100px;
+                        position: relative;
+                        margin-bottom: 6px;
+                        img {
+                            width: 100%;
+                            border-radius: 6px 6px 0 0;
+                            height: 100%;
+                        }
+                        .name {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background: rgba(0, 0, 0, .65);
+                            height: 18px;
+                            line-height: 18px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            padding: 6px 0;
+                            font-size: 14px;
+                            text-indent: 10px;
+                            color: #fff;
+                        }
+                        .num {
+                            position: absolute;
+                            left: -5px;
+                            top: 10px;
+                            background: #6600cd;
+                            color: #fff;
+                            display: inline-block;
+                            font-size: 12px;
+                            padding: 0 15px 0 10px;
+                            border-radius: 0 20px 20px 0;
+                            &::after {
+                                border: 5px solid transparent;
+                                border-top-color: #333;
+                                content: "";
+                                width: 0;
+                                height: 0;
+                                position: absolute;
+                                z-index: -1;
+                                left: 0;
+                                bottom: -10px;
+                            }
+                        }
+                    }
+                    .open {
+                        display: inline-block;
+                        @extend .common-open;
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+    //绑定手机
+    .user-bind-mobile {
+        width: 90vw;
+        margin: 10px auto;
+        .user-logo {
+            text-align: center;
+            padding: 30px 0 0;
+            img {
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+            }
+        }
+        .user-form {
+            list-style: none;
+            margin: 20px 0;
+            padding: 30px 30px 10px;
+            background: #fff;
+            border-radius: 6px;
+            li {
+                margin-bottom: 20px;
+                .inp {
+                    font-size: 14px;
+                    outline: none;
+                    line-height: 25px;
+                    border: none;
+                    border-bottom: 1px solid #ededed;
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding-left: 30px;
+                    @each $name in user,
+                    mobile,
+                    password,
+                    mail {
+                        &.#{$name} {
+                            background: url(../images/login/#{$name}.png) no-repeat 0 center;
+                            background-size: auto 16px;
+                        }
+                    }
+                }
+                .bind {
+                    font-size: 14px;
+                    .red {
+                        color: #f00;
+                    }
+                }
+                &.special {
+                    position: relative;
+                    .get-code {
+                        outline: none;
+                        position: absolute;
+                        right: 0;
+                        bottom: 5px;
+                        border: 1px solid $top-nav-bgcolor;
+                        color: $top-nav-bgcolor;
+                        background: #fff;
+                        border-radius: 30px;
+                        line-height: 24px;
+                        font-size: 12px;
+                        padding: 0 10px;
+                        &[disabled] {
+                            border-color: #ddd;
+                            color: #ccc;
+                        }
+                    }
+                }
+            }
+        }
+        .uk-button-primary {
+            background: $top-nav-bgcolor;
+            border-radius: 30px;
+        }
+    }
+    //设置
+    .user-setting-wrap {
+        width: 95vw;
+        margin: 10px auto 0;
+        .user-list {
+            background: #fff;
+            border-radius: 6px;
+            li {
+                border-bottom: 1px solid #ededed;
+                .link {
+                    display: block;
+                    line-height: 30px;
+                    padding: 10px;
+                    color: #333;
+                    text-decoration: none;
+                    position: relative;
+                    font-size: 16px;
+                    .icon {
+                        display: inline-block;
+                        width: 25px;
+                        height: 20px;
+                        vertical-align: middle;
+                        @each $var in mobile,
+                        psw,
+                        rz {
+                            &.#{$var} {
+                                background: url(../images/user/#{$var}.png) no-repeat;
+                                background-size: auto 90%;
+                            }
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        background: url(../images/user/arr_right.png) no-repeat;
+                        background-size: auto 95%;
+                        position: absolute;
+                        right: 10px;
+                        top: 35%;
+                    }
+                }
+                &:last-child {
+                    border: none;
                 }
             }
         }

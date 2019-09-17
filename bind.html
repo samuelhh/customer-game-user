@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/assets/styles/uikit.min.css">
+    <link rel="stylesheet" href="src/assets/styles/style.min.css">
+    <script src="src/assets/js/jquery.min.js"></script>
+    <script src="src/assets/js/uikit.min.js"></script>
+    <script src="src/assets/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+    <div class="han-page-user-wrap has-topbar">
+        <div class="user-top-fixed">
+            <nav class="common-top-nav">
+                <div class="nav-left">
+                    <a href="/setting.html" class="link">
+                        <i class="icon back"></i>
+                    </a>
+                </div>
+                <div class="nav-title">绑定手机</div>
+            </nav>
+        </div>
+        <div class="user-bind-mobile">
+            <div class="user-logo">
+                <img src="/src/assets/images/avatar.jpg" alt="">
+            </div>
+            <ul class="user-form">
+                <li>
+                    <input type="text" class="inp mobile" placeholder="请输入手机号" class="userPhone">
+                </li>
+                <li class="special">
+                    <input type="text" class="inp mail" placeholder="请输入验证码">
+                    <button type="button" class="get-code getSecond">点击获取验证码</button>
+                </li>
+            </ul>
+            <button class="uk-button uk-button-primary  uk-width-1-1">立即绑定</button>
+            <p>-------已绑定情况---------</p>
+            <ul class="user-form">
+                <li>
+                    <div class="bind">
+                        当前绑定号码：<b class="red">158****1234</b>
+                    </div>
+
+                </li>
+
+            </ul>
+            <button class="uk-button uk-button-primary  uk-width-1-1">立即换绑</button>
+        </div>
+    </div>
+</body>
+
+</html>

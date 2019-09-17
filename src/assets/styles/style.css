@@ -35,7 +35,7 @@ html {
   padding-bottom: 55px;
 }
 
-.common-open, .common-game-list li .open, .han-page-index-wrap .index-banner-box .banner-foot .open, .han-page-index-wrap .index-scroll-new .open, .han-page-game-wrap .game-category-box .game-cate-inner .common-game-list li.special .foot .down {
+.common-open, .common-game-list li .open, .han-page-index-wrap .index-banner-box .banner-foot .open, .han-page-index-wrap .index-scroll-new .open, .han-page-game-wrap .game-category-box .game-cate-inner .common-game-list li.special .foot .down, .han-page-user-wrap .user-game-list li.game-item .game-inner .open {
   border: 1px solid #ddd;
   color: #f60;
   line-height: 22px;
@@ -46,7 +46,7 @@ html {
   transition: all 0.25s ease-in-out;
 }
 
-.common-open:active, .common-game-list li .open:active, .han-page-index-wrap .index-banner-box .banner-foot .open:active, .han-page-index-wrap .index-scroll-new .open:active, .han-page-game-wrap .game-category-box .game-cate-inner .common-game-list li.special .foot .down:active {
+.common-open:active, .common-game-list li .open:active, .han-page-index-wrap .index-banner-box .banner-foot .open:active, .han-page-index-wrap .index-scroll-new .open:active, .han-page-game-wrap .game-category-box .game-cate-inner .common-game-list li.special .foot .down:active, .han-page-user-wrap .user-game-list li.game-item .game-inner .open:active {
   background: #f60;
   border-color: #f60;
   color: #fff;
@@ -101,13 +101,36 @@ html {
   display: inline-block;
   padding: 0 20%;
   line-height: 38px;
+  height: 38px;
   text-align: center;
   color: #fff;
   text-decoration: none;
 }
 
+.common-line-tabs li a::after {
+  width: 0;
+  left: 50%;
+  transition: all 0.15s ease-in-out;
+}
+
 .common-line-tabs li a.active {
-  border-bottom: 3px solid #148f77;
+  position: relative;
+}
+
+.common-line-tabs li a.active::after {
+  width: 100%;
+  left: 0;
+  display: inline-block;
+  content: "";
+  height: 3px;
+  background: #148f77;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+}
+
+.common-line-tabs.specal li a.active::after {
+  bottom: -5px;
 }
 
 .common-top-nav {
@@ -129,6 +152,13 @@ html {
   top: 0;
 }
 
+.common-top-nav .nav-title {
+  text-align: center;
+  color: #fff;
+  line-height: 55px;
+  font-size: 18px;
+}
+
 .common-top-nav .link {
   display: block;
 }
@@ -147,6 +177,11 @@ html {
 
 .common-top-nav .icon.search {
   background: url(../images/icon/search_white.png) no-repeat center;
+  background-size: auto 50%;
+}
+
+.common-top-nav .icon.setting {
+  background: url(../images/icon/setting_white.png) no-repeat center;
   background-size: auto 50%;
 }
 
@@ -454,7 +489,8 @@ html {
 }
 
 .uk-alert {
-  font-size: 12px;
+  font-size: 14px;
+  padding: 10px 30px 10px 10px;
 }
 
 .uk-alert .links {
@@ -507,6 +543,15 @@ html {
 
 .uk-dotnav > .uk-active > * {
   background: #f60;
+}
+
+.uk-modal-close-outside {
+  padding: 8px;
+  color: #000;
+  background: #fff;
+  top: -8px;
+  right: -8px;
+  border-radius: 50%;
 }
 
 /*
@@ -1429,16 +1474,17 @@ html {
 ------------------------
 */
 .han-page-game-wrap .game-top-fixed {
-  height: 96px;
+  height: 94px;
   z-index: 3;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
+  overflow: hidden;
 }
 
 .han-page-game-wrap.has-topbar {
-  padding-top: 96px;
+  padding-top: 94px;
 }
 
 .han-page-game-wrap .common-top-nav .inner {
@@ -1485,7 +1531,7 @@ html {
 .han-page-game-wrap .game-side-bar {
   position: fixed;
   left: 0;
-  top: 96px;
+  top: 94px;
   bottom: 0;
   width: 70px;
   background: #fff;
@@ -1598,4 +1644,370 @@ html {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.han-page-game-wrap .game-iframe-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 55px;
+}
+
+.han-page-game-wrap .game-iframe-wrap iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/*
+------------------------
+我的
+------------------------
+*/
+.han-page-user-wrap.has-step {
+  padding-top: 94px;
+}
+
+.han-page-user-wrap .user-top-fixed {
+  height: 55px;
+  z-index: 3;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.han-page-user-wrap .user-top-fixed.step {
+  height: 94px;
+}
+
+.han-page-user-wrap .user-top-fixed .step-wrap {
+  background: #fff;
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+}
+
+.han-page-user-wrap .user-top-fixed .step-wrap li {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.han-page-user-wrap .user-top-fixed .step-wrap li.active {
+  color: #1e87f0;
+}
+
+.han-page-user-wrap .user-top-fixed .step-wrap li:first-child {
+  position: relative;
+}
+
+.han-page-user-wrap .user-top-fixed .step-wrap li:first-child::after {
+  position: absolute;
+  right: -19px;
+  top: 0;
+  content: "";
+  display: block;
+  width: 38px;
+  height: 38px;
+  background: url(../images/user/arr_right2.png) no-repeat center;
+  background-size: auto 150%;
+  opacity: 0.3;
+}
+
+.han-page-user-wrap .user-head {
+  background: #33cccc;
+  min-height: 70px;
+  padding: 10px 0 0 100px;
+  position: relative;
+}
+
+.han-page-user-wrap .user-head .avatar {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+.han-page-user-wrap .user-head .info {
+  color: #fff;
+}
+
+.han-page-user-wrap .user-head .info .name {
+  font-size: 18px;
+  font-weight: bold;
+  height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 5px;
+}
+
+.han-page-user-wrap .user-head .info .desc {
+  font-size: 14px;
+}
+
+.han-page-user-wrap .user-title {
+  position: relative;
+  height: 20px;
+  margin: 5px 0 15px;
+}
+
+.han-page-user-wrap .user-title .i-line {
+  display: inline-block;
+  width: 30vw;
+  height: 1px;
+  background: #33cccc;
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translate(-50%, 0);
+}
+
+.han-page-user-wrap .user-title .i-text {
+  background: #f2f2f2;
+  padding: 0 10px;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 3px;
+  transform: translate(-50%, 0);
+  font-size: 16px;
+}
+
+.han-page-user-wrap .user-game-list {
+  padding: 10px 0;
+}
+
+.han-page-user-wrap .user-game-list li.game-item {
+  float: left;
+  width: 50vw;
+  margin-bottom: 10px;
+}
+
+.han-page-user-wrap .user-game-list li.game-item .game-inner {
+  width: 92%;
+  margin: 0 auto;
+  background: #fff;
+  min-height: 140px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.han-page-user-wrap .user-game-list li.game-item .game-inner .img-cover {
+  height: 100px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.han-page-user-wrap .user-game-list li.game-item .game-inner .img-cover img {
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  height: 100%;
+}
+
+.han-page-user-wrap .user-game-list li.game-item .game-inner .img-cover .name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  height: 18px;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 6px 0;
+  font-size: 14px;
+  text-indent: 10px;
+  color: #fff;
+}
+
+.han-page-user-wrap .user-game-list li.game-item .game-inner .img-cover .num {
+  position: absolute;
+  left: -5px;
+  top: 10px;
+  background: #6600cd;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 15px 0 10px;
+  border-radius: 0 20px 20px 0;
+}
+
+.han-page-user-wrap .user-game-list li.game-item .game-inner .img-cover .num::after {
+  border: 5px solid transparent;
+  border-top-color: #333;
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: -10px;
+}
+
+.han-page-user-wrap .user-game-list li.game-item .game-inner .open {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.han-page-user-wrap .user-bind-mobile {
+  width: 90vw;
+  margin: 10px auto;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-logo {
+  text-align: center;
+  padding: 30px 0 0;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-logo img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-form {
+  list-style: none;
+  margin: 20px 0;
+  padding: 30px 30px 10px;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-form li {
+  margin-bottom: 20px;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-form li .inp {
+  font-size: 14px;
+  outline: none;
+  line-height: 25px;
+  border: none;
+  border-bottom: 1px solid #ededed;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-form li .inp.user {
+  background: url(../images/login/user.png) no-repeat 0 center;
+  background-size: auto 16px;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-form li .inp.mobile {
+  background: url(../images/login/mobile.png) no-repeat 0 center;
+  background-size: auto 16px;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-form li .inp.password {
+  background: url(../images/login/password.png) no-repeat 0 center;
+  background-size: auto 16px;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-form li .inp.mail {
+  background: url(../images/login/mail.png) no-repeat 0 center;
+  background-size: auto 16px;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-form li .bind {
+  font-size: 14px;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-form li .bind .red {
+  color: #f00;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-form li.special {
+  position: relative;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-form li.special .get-code {
+  outline: none;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  border: 1px solid #33cccc;
+  color: #33cccc;
+  background: #fff;
+  border-radius: 30px;
+  line-height: 24px;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.han-page-user-wrap .user-bind-mobile .user-form li.special .get-code[disabled] {
+  border-color: #ddd;
+  color: #ccc;
+}
+
+.han-page-user-wrap .user-bind-mobile .uk-button-primary {
+  background: #33cccc;
+  border-radius: 30px;
+}
+
+.han-page-user-wrap .user-setting-wrap {
+  width: 95vw;
+  margin: 10px auto 0;
+}
+
+.han-page-user-wrap .user-setting-wrap .user-list {
+  background: #fff;
+  border-radius: 6px;
+}
+
+.han-page-user-wrap .user-setting-wrap .user-list li {
+  border-bottom: 1px solid #ededed;
+}
+
+.han-page-user-wrap .user-setting-wrap .user-list li .link {
+  display: block;
+  line-height: 30px;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  font-size: 16px;
+}
+
+.han-page-user-wrap .user-setting-wrap .user-list li .link .icon {
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.han-page-user-wrap .user-setting-wrap .user-list li .link .icon.mobile {
+  background: url(../images/user/mobile.png) no-repeat;
+  background-size: auto 90%;
+}
+
+.han-page-user-wrap .user-setting-wrap .user-list li .link .icon.psw {
+  background: url(../images/user/psw.png) no-repeat;
+  background-size: auto 90%;
+}
+
+.han-page-user-wrap .user-setting-wrap .user-list li .link .icon.rz {
+  background: url(../images/user/rz.png) no-repeat;
+  background-size: auto 90%;
+}
+
+.han-page-user-wrap .user-setting-wrap .user-list li .link::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/user/arr_right.png) no-repeat;
+  background-size: auto 95%;
+  position: absolute;
+  right: 10px;
+  top: 35%;
+}
+
+.han-page-user-wrap .user-setting-wrap .user-list li:last-child {
+  border: none;
 }

@@ -30,7 +30,8 @@
 }
 
 .uk-alert {
-    font-size: 12px;
+    font-size: 14px;
+    padding: 10px 30px 10px 10px;
     .links {
         color: $theme-color;
     }
@@ -78,4 +79,13 @@
 
 .uk-dotnav>.uk-active>* {
     background: $theme-link-color;
+}
+
+.uk-modal-close-outside {
+    padding: 8px;
+    color: #000;
+    background: #fff;
+    top: -8px;
+    right: -8px;
+    border-radius: 50%;
 }

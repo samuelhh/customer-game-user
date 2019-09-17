@@ -98,11 +98,39 @@ html {
             display: inline-block;
             padding: 0 20%;
             line-height: 38px;
+            height: 38px;
             text-align: center;
             color: #fff;
             text-decoration: none;
+            &::after {
+                width: 0;
+                left: 50%;
+                transition: all 0.15s ease-in-out;
+            }
             &.active {
-                border-bottom: 3px solid darken($color: $index-tabs-bgcolor, $amount: 10%);
+                position: relative;
+                &::after {
+                    width: 100%;
+                    left: 0;
+                    display: inline-block;
+                    content: "";
+                    height: 3px;
+                    background: darken($color: $index-tabs-bgcolor, $amount: 10%);
+                    border-radius: 4px;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+    &.specal {
+        li {
+            a {
+                &.active {
+                    &::after {
+                        bottom: -5px;
+                    }
+                }
             }
         }
     }
@@ -124,6 +152,12 @@ html {
         right: 0;
         top: 0;
     }
+    .nav-title {
+        text-align: center;
+        color: #fff;
+        line-height: $top-nav-height;
+        font-size: 18px;
+    }
     .link {
         display: block;
     }
@@ -138,6 +172,10 @@ html {
         }
         &.search {
             background: url(../images/icon/search_white.png) no-repeat center;
+            background-size: auto 50%;
+        }
+        &.setting {
+            background: url(../images/icon/setting_white.png) no-repeat center;
             background-size: auto 50%;
         }
     }

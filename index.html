@@ -336,10 +336,10 @@
     <div class="common-footbar">
         <ul class="foot-list">
             <li>
-                <a href="">首页</a>
+                <a href="/index.html">首页</a>
             </li>
             <li>
-                <a href="">游戏</a>
+                <a href="/game.html">游戏</a>
             </li>
             <li class="special">
                 &nbsp;
@@ -348,18 +348,19 @@
                 </a>
             </li>
             <li>
-                <a href="">发现</a>
+                <a href="/find.html">发现</a>
             </li>
             <li>
-                <a href="">我的</a>
+                <a href="/user.html">我的</a>
             </li>
         </ul>
     </div>
 
 
     <!-- 绑定手机号 -->
-    <div id="bind-mobile-modal" class="uk-flex-top" uk-modal>
+    <div id="bind-mobile-modal" class="uk-flex-top" uk-modal="bg-close:false">
         <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical han-login-form">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
             <h4 class="big-title">您的账号存在风险</h4>
             <div class="uk-alert-warning" uk-alert>
                 <p>为了您的账户安全，请绑定手机号！</p>
@@ -378,7 +379,7 @@
     </div>
 
     <!-- 二维码 -->
-    <div id="modal-close-outside" uk-modal>
+    <div id="modal-close-outside" uk-modal="bg-close:false">
         <div class="uk-modal-dialog uk-modal-body  uk-margin-auto-vertical">
             <button class="uk-modal-close-outside" type="button" uk-close></button>
             <h5>微信客服</h5>
