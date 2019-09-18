@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <div class="han-page-game-wrap  has-topbar">
-        <div class="game-top-fixed">
+    <div class="han-page-game-wrap  has-topbar normal">
+        <div class="game-top-fixed normal">
             <nav class="common-top-nav">
                 <div class="nav-left">
                     <a href="/index.html" class="link">
@@ -42,8 +42,78 @@
                 </div>
             </nav>
         </div>
-
+        <div class="get-gift-wrap">
+            <ul class="common-game-list">
+                <li>
+                    <img src="http://imga1.5054399.com/upload_pic/2018/11/21/4399_16264623739.jpg" class="img" alt="">
+                    <p class="name">保卫萝卜挑战版 <i class="hot"></i></p>
+                    <p class="desc">高清电脑版再次火热来袭</p>
+                    <a href="" class="open cover">下载</a>
+                </li>
+            </ul>
+            <ul class="gift-list">
+                <li>
+                    <div class="head">
+                        <span class="name">古墓迷城</span>
+                        <span class="info">剩余：<b>50%</b></span>
+                    </div>
+                    <div class="desc">指尖寻龙，弑龙夺宝，等你来战！</div>
+                    <a href="" class="open orange">领取</a>
+                </li>
+                <li>
+                    <div class="head">
+                        <span class="name">古墓迷城</span>
+                        <span class="info">剩余：<b>50%</b></span>
+                    </div>
+                    <div class="desc">指尖寻龙，弑龙夺宝，等你来战！</div>
+                    <a href="" class="open orange">领取</a>
+                </li>
+                <li>
+                    <div class="head">
+                        <span class="name">古墓迷城</span>
+                        <span class="info">剩余：<b>50%</b></span>
+                    </div>
+                    <div class="desc">指尖寻龙，弑龙夺宝，等你来战！</div>
+                    <a href="" class="open orange">领取</a>
+                </li>
+                <li>
+                    <div class="head">
+                        <span class="name">古墓迷城</span>
+                        <span class="info">剩余：<b>50%</b></span>
+                    </div>
+                    <div class="desc">指尖寻龙，弑龙夺宝，等你来战！</div>
+                    <a href="" class="open orange">领取</a>
+                </li>
+            </ul>
+        </div>
     </div>
+
+
+    <!-- 绑定手机号 -->
+    <div id="bind-mobile-modal" class="uk-flex-top" uk-modal="bg-close:false">
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical han-login-form">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <h4 class="big-title">您的账号存在风险</h4>
+            <div class="uk-alert-warning" uk-alert>
+                <p>为了您的账户安全，请绑定手机号！</p>
+            </div>
+            <ul class="h-form">
+                <li>
+                    <input type="text" class="inp mobile" placeholder="请输入手机号" class="userPhone">
+                </li>
+                <li class="special">
+                    <input type="text" class="inp mail" placeholder="请输入验证码">
+                    <button type="button" class="get-code getSecond">点击获取验证码</button>
+                </li>
+            </ul>
+            <button class="uk-button uk-button-primary  uk-width-1-1">立即绑定</button>
+        </div>
+    </div>
+    <script>
+        setTimeout(() => {
+            UIkit.modal("#bind-mobile-modal").show();
+        }, 3000);
+    </script>
 </body>
 
 </html>
