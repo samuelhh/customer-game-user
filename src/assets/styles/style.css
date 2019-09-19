@@ -455,6 +455,17 @@ html {
   background-size: 60%;
 }
 
+.common-dialog-recharge {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f2f2f2;
+  display: none;
+}
+
 /*
 *2019-08-28 新增颜色
 *
@@ -2137,4 +2148,198 @@ html {
 .han-page-user-wrap .user-setting-wrap .uk-button-primary {
   background: #33cccc;
   border-radius: 30px;
+}
+
+/*
+------------------------
+搜索
+------------------------
+*/
+.han-page-search-wrap .top-nav-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  line-height: 55px;
+  height: 55px;
+  background: #33cccc;
+  display: flex;
+  padding-right: 10px;
+}
+
+.han-page-search-wrap .top-nav-bar .nav-left {
+  float: left;
+  width: 45px;
+}
+
+.han-page-search-wrap .top-nav-bar .nav-left .link {
+  display: block;
+  width: 45px;
+  height: 55px;
+}
+
+.han-page-search-wrap .top-nav-bar .nav-left .icon {
+  margin-top: 5px;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+}
+
+.han-page-search-wrap .top-nav-bar .nav-left .icon.back {
+  background: url(../images/icon/back_white.png) no-repeat center;
+  background-size: auto 50%;
+}
+
+.han-page-search-wrap .top-nav-bar .nav-center {
+  flex: 1;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.han-page-search-wrap .top-nav-bar .nav-center .icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../images/icon/search.png) no-repeat 0 0;
+  background-size: auto 90%;
+  vertical-align: middle;
+  position: absolute;
+  left: 6px;
+  top: 38%;
+}
+
+.han-page-search-wrap .top-nav-bar .nav-center .close {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../images/close_circle.png) no-repeat center;
+  background-size: 65%;
+  position: absolute;
+  right: 0;
+  top: 27%;
+  opacity: 0.4;
+}
+
+.han-page-search-wrap .top-nav-bar .nav-center .inp {
+  outline: none;
+  box-sizing: border-box;
+  line-height: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 20px;
+  width: 100%;
+  padding-left: 25px;
+  font-size: 14px;
+  border: none;
+}
+
+.han-page-search-wrap .top-nav-bar .nav-right {
+  float: right;
+  padding-left: 5px;
+}
+
+.han-page-search-wrap .top-nav-bar .nav-right .btn {
+  color: #fff;
+  background: no-repeat;
+  border: none;
+  outline: none;
+}
+
+.han-page-search-wrap .hot-search-box {
+  margin: 10px 0;
+}
+
+.han-page-search-wrap .hot-search-box dt {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  font-weight: normal;
+}
+
+.han-page-search-wrap .hot-search-box dd {
+  width: 33.3%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.han-page-search-wrap .hot-search-box dd .inner {
+  border-radius: 20px;
+  padding: 0 5px;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 30px;
+  height: 30px;
+  color: #666;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.han-page-search-wrap .hot-search-box dd .inner a {
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.han-page-search-wrap .search-nothing {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.han-page-search-wrap .search-nothing .icon {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #aaa url(../images/search_white.png) no-repeat center;
+  background-size: 60%;
+}
+
+.han-page-search-wrap .search-nothing .tit {
+  color: #000;
+  font-size: 18px;
+  margin: 0;
+}
+
+.han-page-search-wrap .search-nothing .subtit {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.han-page-search-wrap .search-result-list {
+  background: #fff;
+  padding: 10px;
+}
+
+.han-page-search-wrap .search-result-list .tit {
+  font-size: 18px;
+}
+
+.han-page-search-wrap .search-result-list .res-list li {
+  border-bottom: 1px solid #ededed;
+  line-height: 45px;
+}
+
+.han-page-search-wrap .search-result-list .res-list li .icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../images/icon/search.png) no-repeat;
+  background-size: 100%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.han-page-search-wrap .search-result-list .res-list li a {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+}
+
+.han-page-search-wrap .search-result-list .res-list li:last-child {
+  border-bottom: 0;
 }

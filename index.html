@@ -16,7 +16,7 @@
 <body>
     <div class="han-page-index-wrap has-topbar has-footbar">
         <nav class="index-top-nav">
-            <div class="input-box">
+            <div class="input-box" onclick="window.location.href='/search.html'">
                 <span class="input"><i class="icon"></i> 请输入搜索关键字</span>
             </div>
             <div class="nav-left">
@@ -24,7 +24,7 @@
             </div>
             <div class="nav-right">
                 <a href="" class="icon mobile" uk-toggle="target: #bind-mobile-modal"></a>
-                <a href="/recharge.html" class="icon download"></a>
+                <a href="javascript:;" class="icon download" onclick="handleOpenfull()"></a>
                 <a href="" class="icon ercode" uk-toggle="target: #modal-close-outside"></a>
             </div>
         </nav>
@@ -436,19 +436,90 @@
         </a>
         <a href="javascript:;" class="close j-right-close"></a>
     </div>
+
+
+    <!-- 充值弹窗 -->
+    <div class="common-dialog-recharge">
+        <div class="han-page-game-wrap  has-topbar normal">
+            <div class="game-top-fixed normal">
+                <nav class="common-top-nav">
+                    <div class="nav-title">充值</div>
+                </nav>
+            </div>
+            <div class="get-gift-wrap">
+                <ul class="common-game-list">
+                    <li>
+                        <img src="http://imga1.5054399.com/upload_pic/2018/11/21/4399_16264623739.jpg" class="img" alt="">
+                        <p class="name">保卫萝卜挑战版</p>
+                        <p class="desc">高清电脑版再次火热来袭</p>
+                        <span class="num"><b>¥</b>6.0</span>
+                    </li>
+                </ul>
+                <ul class="pay-box">
+                    <li>
+                        <i class="icon"></i>
+                        <div class="name">代金券</div>
+                        <span class="price">0</span>
+                    </li>
+                    <li>
+                        <i class="icon"></i>
+                        <div class="name">平台币</div>
+                        <span class="price">0</span>
+                    </li>
+                    <li class="active">
+                        <i class="icon"></i>
+                        <div class="name">微信支付</div>
+                        <span class="price">¥ 6</span>
+                    </li>
+                    <li>
+                        <i class="icon"></i>
+                        <div class="name">支付宝支付</div>
+                        <span class="price">¥ 6</span>
+                    </li>
+                </ul>
+                <br>
+                <div class="uk-text-center">
+                    <button class="uk-button uk-button-primary  uk-width-1-2 j-button-pay">立即支付</button>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
     <script>
         //打开关闭最近玩
         $(".common-index-modal .c-btn").click(function() {
-                var box = $(".j-index-menu");
-                if (box.hasClass("hidden")) {
-                    box.removeClass("hidden");
-                } else {
-                    box.addClass("hidden");
-                }
-            })
-            //关闭右下角弹窗
+            var box = $(".j-index-menu");
+            if (box.hasClass("hidden")) {
+                box.removeClass("hidden");
+            } else {
+                box.addClass("hidden");
+            }
+        });
+        //关闭右下角弹窗
         $(".j-right-close").click(function() {
-            $(".common-right-fixed").fadeOut(100)
+            $(".common-right-fixed").fadeOut(100);
+        });
+
+
+        // 全屏支付弹窗
+        function handleOpenfull() {
+            $(".common-dialog-recharge").fadeIn(300);
+            $("html").addClass('uk-modal-page');
+        };
+        //选择付款方式
+        $(".pay-box li").click(function() {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+            } else {
+                $(this).addClass("active").siblings().removeClass("active");
+            }
+        });
+        //关闭全屏支付弹窗
+        $(".j-button-pay").click(function() {
+            $(".common-dialog-recharge").fadeOut(300);
+            $("html").removeClass("uk-modal-page")
         })
     </script>
 </body>

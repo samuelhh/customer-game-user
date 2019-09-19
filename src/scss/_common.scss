@@ -426,3 +426,15 @@ html {
         background-size: 60%;
     }
 }
+
+//充值弹窗
+.common-dialog-recharge {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $bg-color;
+    display: none;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索</title>
+    <link rel="stylesheet" href="src/assets/styles/uikit.min.css">
+    <link rel="stylesheet" href="src/assets/styles/style.min.css">
+    <script src="src/assets/js/jquery.min.js"></script>
+    <script src="src/assets/js/uikit.min.js"></script>
+    <script src="src/assets/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+    <div class="han-page-search-wrap  has-topbar">
+        <div class="top-nav-bar">
+            <div class="nav-left">
+                <a href="/index.html" class="link">
+                    <i class="icon back"></i>
+                </a>
+            </div>
+            <div class="nav-center">
+                <i class="icon"></i>
+                <input type="text" class="inp" placeholder="请输入搜索关键字" onfocus="handleOnfocus()">
+                <i class="close"></i>
+            </div>
+            <div class="nav-right" style="display: none">
+                <button class="btn">取消</button>
+            </div>
+        </div>
+        <div class="search-nothing">
+            <i class="icon"></i><br>
+            <p class="tit">没有找搜索结果</p>
+            <p class="subtit">您可以试试下面的搜索建议</p>
+        </div>
+        <dl class="hot-search-box uk-clearfix">
+            <dt>热门搜索</dt>
+            <dd>
+                <div class="inner"><a href="">弹弹堂</a></div>
+            </dd>
+            <dd>
+                <div class="inner"><a href="">保卫怪物岛</a></div>
+            </dd>
+            <dd>
+                <div class="inner"><a href="">炫酷旋转忍者</a></div>
+            </dd>
+            <dd>
+                <div class="inner"><a href="">勇者之路</a></div>
+            </dd>
+            <dd>
+                <div class="inner"><a href="">老爹寿司店中文asdf</a></div>
+            </dd>
+        </dl>
+        <dl class="hot-search-box uk-clearfix">
+            <dt>分类推荐</dt>
+            <dd>
+                <div class="inner"><a href="">传奇</a></div>
+            </dd>
+            <dd>
+                <div class="inner"><a href="">卡牌</a></div>
+            </dd>
+            <dd>
+                <div class="inner"><a href="">仙游</a></div>
+            </dd>
+            <dd>
+                <div class="inner"><a href="">勇者之路</a></div>
+            </dd>
+            <dd>
+                <div class="inner"><a href="">小游戏</a></div>
+            </dd>
+        </dl>
+        <div class="search-result-list">
+            <div class="tit">搜索推荐</div>
+            <ul class="res-list">
+                <li><a href=""><i class="icon"></i>推荐关键词</a></li>
+                <li><a href=""><i class="icon"></i>推荐关键词</a></li>
+                <li><a href=""><i class="icon"></i>推荐关键词</a></li>
+                <li><a href=""><i class="icon"></i>推荐关键词</a></li>
+                <li><a href=""><i class="icon"></i>推荐关键词</a></li>
+                <li><a href=""><i class="icon"></i>推荐关键词</a></li>
+                <li><a href=""><i class="icon"></i>推荐关键词</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        //获得焦点显示取消按钮
+        function handleOnfocus() {
+            $(".nav-right").show();
+        };
+    </script>
+</body>
+
+</html>
